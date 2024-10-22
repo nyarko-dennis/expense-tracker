@@ -23,7 +23,7 @@ import androidx.navigation.compose.rememberNavController
 import com.dev.dna.expensetracker.feature.add_expense.AddExpense
 import com.dev.dna.expensetracker.feature.home.HomeScreen
 import com.dev.dna.expensetracker.feature.stats.StatsScreen
-import com.dev.dna.expensetracker.feature.transactionlist.TransactionListScreen
+import com.dev.dna.expensetracker.feature.transaction.TransactionListScreen
 import com.dev.dna.expensetracker.ui.theme.Zinc
 
 @Composable
@@ -46,9 +46,16 @@ fun NavHostScreen() {
     }) {
         NavHost(
             navController = navController,
-            startDestination = "/home",
+            startDestination = "/splash",
             modifier = Modifier.padding(it)
         ) {
+
+            composable(route = "/splash") {
+                bottomBarVisibility = false
+                SplashScreen(navController)
+            }
+
+
             composable(route = "/home") {
                 bottomBarVisibility = true
                 HomeScreen(navController)

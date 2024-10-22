@@ -1,4 +1,4 @@
-package com.dev.dna.expensetracker.feature.transactionlist
+package com.dev.dna.expensetracker.feature.transaction
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween
